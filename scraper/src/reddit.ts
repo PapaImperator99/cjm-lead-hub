@@ -39,14 +39,16 @@ const SEARCH_TERMS = [
 // ── Intent filtering ──────────────────────────────────────────────────────────
 
 const DEMAND_KEYWORDS = [
-  'looking for mover', 'looking for a mover', 'need mover', 'need a mover',
-  'need moving', 'need help moving', 'need help with my move',
-  'recommend', 'recommendation', 'suggestions', 'anyone know',
-  'good mover', 'reliable mover', 'affordable mover', 'cheap mover',
-  'who did you use', 'used before', 'experience with',
-  'getting quotes', 'quote for', 'moving soon', 'moving next',
-  'moving this', 'have to move', 'moving out', 'moving in',
-  'help me move', 'anyone move', 'best mover', 'hire',
+  // Very specific mover-hiring phrases only
+  'looking for movers', 'looking for a mover', 'need movers', 'need a mover',
+  'need help moving', 'need help with my move', 'need someone to help me move',
+  'recommend movers', 'recommend a mover', 'recommend any movers',
+  'good movers', 'reliable movers', 'affordable movers', 'cheap movers',
+  'any movers', 'any good movers', 'anyone used movers',
+  'who did you use to move', 'used a moving company',
+  'moving company recommendation', 'hiring movers', 'hire movers',
+  'help me move', 'help moving my', 'looking for moving company',
+  'need a moving company', 'any moving companies',
 ]
 
 const SUPPLY_KEYWORDS = [
