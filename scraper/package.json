@@ -7,6 +7,7 @@
     "start": "tsx src/index.ts",
     "kijiji": "tsx src/kijiji.ts",
     "facebook": "tsx src/facebook.ts",
+    "reddit": "tsx src/reddit.ts",
     "install-browsers": "playwright install chromium"
   },
   "dependencies": {

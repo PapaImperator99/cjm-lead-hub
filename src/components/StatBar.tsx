@@ -14,16 +14,18 @@ export function StatBar({ leads }: Props) {
     contacted: leads.filter(l => l.status === 'contacted').length,
     kijiji: leads.filter(l => l.source === 'kijiji').length,
     facebook: leads.filter(l => l.source === 'facebook').length,
+    reddit: leads.filter(l => l.source === 'reddit').length,
   }
 
   return (
-    <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 mb-6">
+    <div className="grid grid-cols-4 sm:grid-cols-7 gap-3 mb-6">
       <Stat label="Total Leads" value={stats.total} color="text-gray-100" />
       <Stat label="New Today" value={stats.newToday} color="text-emerald-400" />
       <Stat label="Unread" value={stats.newTotal} color="text-amber-400" />
       <Stat label="Contacted" value={stats.contacted} color="text-blue-400" />
       <Stat label="Kijiji" value={stats.kijiji} color="text-orange-400" />
       <Stat label="Facebook" value={stats.facebook} color="text-indigo-400" />
+      <Stat label="Reddit" value={stats.reddit} color="text-red-400" />
     </div>
   )
 }

@@ -16,6 +16,7 @@ import cron from 'node-cron'
 import 'dotenv/config'
 import { scrapeKijiji } from './kijiji.js'
 import { scrapeFacebook } from './facebook.js'
+import { scrapeReddit } from './reddit.js'
 
 // ── Peak time logic ───────────────────────────────────────────────────────────
 
@@ -76,6 +77,7 @@ async function runAll(peak: boolean): Promise<void> {
   const results = await Promise.allSettled([
     runScraper('kijiji', scrapeKijiji),
     runScraper('facebook', scrapeFacebook),
+    runScraper('reddit', scrapeReddit),
   ])
 
   results.forEach(r => {

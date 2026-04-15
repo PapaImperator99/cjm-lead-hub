@@ -31,6 +31,7 @@ export function FilterBar({ filters, onChange, onRefresh, loading }: Props) {
         <option value="all">All Sources</option>
         <option value="kijiji">Kijiji</option>
         <option value="facebook">Facebook</option>
+        <option value="reddit">Reddit</option>
       </select>
 
       {/* Status filter */}

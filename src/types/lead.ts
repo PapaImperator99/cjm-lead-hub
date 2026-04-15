@@ -1,4 +1,4 @@
-export type LeadSource = 'kijiji' | 'facebook'
+export type LeadSource = 'kijiji' | 'facebook' | 'reddit'
 export type LeadStatus = 'new' | 'contacted' | 'closed' | 'not_relevant'
 
 export interface Lead {

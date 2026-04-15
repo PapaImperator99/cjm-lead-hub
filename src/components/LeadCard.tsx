@@ -8,8 +8,9 @@ interface Props {
 }
 
 const SOURCE_BADGE: Record<string, string> = {
-  kijiji: 'bg-orange-500/20 text-orange-300 border-orange-500/30',
+  kijiji:   'bg-orange-500/20 text-orange-300 border-orange-500/30',
   facebook: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30',
+  reddit:   'bg-red-500/20 text-red-300 border-red-500/30',
 }
 
 const STATUS_BADGE: Record<LeadStatus, string> = {
@@ -56,7 +57,7 @@ export function LeadCard({ lead, onStatusChange }: Props) {
       <div className="flex flex-wrap gap-2 items-start justify-between mb-2">
         <div className="flex gap-2 items-center flex-wrap">
           <span className={`text-xs font-medium px-2 py-0.5 rounded-full border ${SOURCE_BADGE[lead.source]}`}>
-            {lead.source === 'facebook' ? '📘 Facebook' : '🟠 Kijiji'}
+            {lead.source === 'facebook' ? '📘 Facebook' : lead.source === 'reddit' ? '🟥 Reddit' : '🟠 Kijiji'}
           </span>
           <span className={`text-xs font-medium px-2 py-0.5 rounded-full border ${STATUS_BADGE[lead.status]}`}>
             {lead.status.replace('_', ' ')}
